@@ -1,9 +1,14 @@
 <script setup lang="ts">
+import IpaComponent from './components/ipa-component.vue'
 </script>
 
 <template>
-  <h1>Hello, world!</h1>
+  <Suspense>
+    <template #default>
+      <IpaComponent />
+    </template>
+    <template #fallback>
+      <div>Loading...</div>
+    </template>
+  </Suspense>
 </template>
-
-<style scoped>
-</style>

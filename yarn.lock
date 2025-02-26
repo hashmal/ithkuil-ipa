@@ -2101,6 +2101,11 @@ isexe@^3.1.1:
   resolved "https://registry.yarnpkg.com/isexe/-/isexe-3.1.1.tgz#4a407e2bd78ddfb14bea0c27c6f7072dde775f0d"
   integrity sha512-LpB/54B+/2J5hqQ7imZHfdU31OlgQqx7ZicVlkm9kzg9/w8GKLEcFfJl/t7DCEDueOyBAD6zCCwTO6Fzs0NoEQ==
 
+ithkuil-tools@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/ithkuil-tools/-/ithkuil-tools-0.0.2.tgz#743ad8126e5986561fe86d2c61ea9089252be9d0"
+  integrity sha512-kGOxX/tVXTQ8DHtkNSwMuoUKbrCuHbd2YybBjqptuV/vOBotdSBZiHcQt362zHr1cZJOrdCWrrGYbCmQPw/0AA==
+
 jackspeak@^3.1.2:
   version "3.4.3"
   resolved "https://registry.yarnpkg.com/jackspeak/-/jackspeak-3.4.3.tgz#8833a9d89ab4acde6188942bd1c53b6390ed5a8a"
