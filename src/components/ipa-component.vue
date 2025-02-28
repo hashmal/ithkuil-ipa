@@ -6,7 +6,23 @@ const { romanizedIthkuilToIpa } = await import('ithkuil-tools')
 
 // Local State
 const romanizedIthkuilText = ref('Wezvwaušburdóu yaizxra sai.')
-const ipa = computed(() => romanizedIthkuilToIpa(romanizedIthkuilText.value))
+const ipaResult = computed<string | Error>(() => romanizedIthkuilToIpa(romanizedIthkuilText.value))
+
+const ipa = computed<string | undefined>(() => {
+  if (typeof ipaResult.value === 'string') {
+    return ipaResult.value
+  } else {
+    return undefined
+  }
+})
+
+const error = computed<string | undefined>(() => {
+  if (ipaResult.value instanceof Error) {
+    return ipaResult.value
+  } else {
+    return undefined
+  }
+})
 
 // Events
 
@@ -18,7 +34,9 @@ const ipa = computed(() => romanizedIthkuilToIpa(romanizedIthkuilText.value))
     <div class="wrapper">
       <h1>Romanized Ithkuil to IPA</h1>
       <input type="text" v-model="romanizedIthkuilText" class="ithkuil" />
-      <p class="ipa">{{ ipa }}</p>
+      <p v-if="ipa" class="ipa">{{ ipa }}</p>
+
+      <pre v-if="error" class="ipa" style="text-align: left;">{{ error }}</pre>
     </div>
   </div>
 </template>
