@@ -36,7 +36,13 @@ const error = computed<string | undefined>(() => {
       <input type="text" v-model="romanizedIthkuilText" class="ithkuil" />
       <p v-if="ipa" class="ipa">{{ ipa }}</p>
 
-      <pre v-if="error" class="ipa" style="text-align: left;">{{ error }}</pre>
+      <pre v-if="error" class="ipa error" style="text-align: left;">{{ error }}</pre>
     </div>
   </div>
 </template>
+
+<style scoped>
+.error {
+  color: var(--red);
+}
+</style>
