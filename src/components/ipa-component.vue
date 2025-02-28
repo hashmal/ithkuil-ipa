@@ -16,7 +16,7 @@ const ipa = computed<string | undefined>(() => {
   }
 })
 
-const error = computed<string | undefined>(() => {
+const error = computed<Error | undefined>(() => {
   if (ipaResult.value instanceof Error) {
     return ipaResult.value
   } else {
