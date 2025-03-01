@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { romanizedIthkuilToSyllables } from 'ithkuil-tools'
 import { computed, ref } from 'vue'
 const { romanizedIthkuilToIpa } = await import('ithkuil-tools')
 
@@ -24,6 +25,8 @@ const error = computed<Error | undefined>(() => {
   }
 })
 
+const syllables = computed(() => romanizedIthkuilToSyllables(romanizedIthkuilText.value).map(word => word.join('-')).join(' '))
+
 // Events
 
 // Non-Reactive Properties
@@ -34,9 +37,11 @@ const error = computed<Error | undefined>(() => {
     <div class="wrapper">
       <h1>Romanized Ithkuil to IPA</h1>
       <input type="text" v-model="romanizedIthkuilText" class="ithkuil" />
-      <p v-if="ipa" class="ipa">{{ ipa }}</p>
+      <p v-if="ipa">IPA: <span class="ipa">{{ ipa }}</span></p>
 
       <pre v-if="error" class="ipa error" style="text-align: left;">{{ error }}</pre>
+
+      <p>Syllables: <span class="syllables">{{ syllables }}</span></p>
     </div>
   </div>
 </template>
@@ -44,5 +49,8 @@ const error = computed<Error | undefined>(() => {
 <style scoped>
 .error {
   color: var(--red);
+}
+.syllables {
+  color: var(--orange);
 }
 </style>

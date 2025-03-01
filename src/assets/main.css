@@ -72,4 +72,5 @@ input.ithkuil {
 .ipa {
   font-family: 'Courier New', Courier, monospace;
   font-weight: bold;
+  color: var(--blue);
 }

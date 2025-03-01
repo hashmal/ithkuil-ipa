@@ -2101,10 +2101,12 @@ isexe@^3.1.1:
   resolved "https://registry.yarnpkg.com/isexe/-/isexe-3.1.1.tgz#4a407e2bd78ddfb14bea0c27c6f7072dde775f0d"
   integrity sha512-LpB/54B+/2J5hqQ7imZHfdU31OlgQqx7ZicVlkm9kzg9/w8GKLEcFfJl/t7DCEDueOyBAD6zCCwTO6Fzs0NoEQ==
 
-ithkuil-tools@^0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/ithkuil-tools/-/ithkuil-tools-0.0.2.tgz#743ad8126e5986561fe86d2c61ea9089252be9d0"
-  integrity sha512-kGOxX/tVXTQ8DHtkNSwMuoUKbrCuHbd2YybBjqptuV/vOBotdSBZiHcQt362zHr1cZJOrdCWrrGYbCmQPw/0AA==
+ithkuil-tools@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/ithkuil-tools/-/ithkuil-tools-0.0.4.tgz#563cd4d4e1bec732d3de980611787eff03ce30d8"
+  integrity sha512-piW6tOOxkZ9+LxdX0uSuKA9zSPfNke91pNj4odfbkFed339Oe5ULZ1E8u4WUmCgtxKpzLGLu2wJr1C9cM2MI8g==
+  dependencies:
+    ts-pattern "^5.6.2"
 
 jackspeak@^3.1.2:
   version "3.4.3"
@@ -2904,6 +2906,11 @@ ts-api-utils@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/ts-api-utils/-/ts-api-utils-2.0.1.tgz#660729385b625b939aaa58054f45c058f33f10cd"
   integrity sha512-dnlgjFSVetynI8nzgJ+qF62efpglpWRk8isUEWZGWlJYySCTD6aKvbUDu+zbPeDakk3bg5H4XpitHukgfL1m9w==
+
+ts-pattern@^5.6.2:
+  version "5.6.2"
+  resolved "https://registry.yarnpkg.com/ts-pattern/-/ts-pattern-5.6.2.tgz#aad9b4fe3c3f485dfad46e472e1203b688cc9bb4"
+  integrity sha512-d4IxJUXROL5NCa3amvMg6VQW2HVtZYmUTPfvVtO7zJWGYLJ+mry9v2OmYm+z67aniQoQ8/yFNadiEwtNS9qQiw==
 
 tslib@^2.6.2:
   version "2.8.1"
