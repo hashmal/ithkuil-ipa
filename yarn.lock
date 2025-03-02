@@ -2101,10 +2101,10 @@ isexe@^3.1.1:
   resolved "https://registry.yarnpkg.com/isexe/-/isexe-3.1.1.tgz#4a407e2bd78ddfb14bea0c27c6f7072dde775f0d"
   integrity sha512-LpB/54B+/2J5hqQ7imZHfdU31OlgQqx7ZicVlkm9kzg9/w8GKLEcFfJl/t7DCEDueOyBAD6zCCwTO6Fzs0NoEQ==
 
-ithkuil-tools@^0.0.4:
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/ithkuil-tools/-/ithkuil-tools-0.0.4.tgz#563cd4d4e1bec732d3de980611787eff03ce30d8"
-  integrity sha512-piW6tOOxkZ9+LxdX0uSuKA9zSPfNke91pNj4odfbkFed339Oe5ULZ1E8u4WUmCgtxKpzLGLu2wJr1C9cM2MI8g==
+ithkuil-tools@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/ithkuil-tools/-/ithkuil-tools-0.0.5.tgz#ea678a90bf7934aa176cce34687cfdc9662d6940"
+  integrity sha512-8E5M8preH3rP2FjB03Ywthj0ZR24598dyOWbl83FqgQlIQyuPz/f4n+ydRpbohlmHr9/zjnIciWZ/QWWxoHPNw==
   dependencies:
     ts-pattern "^5.6.2"
 

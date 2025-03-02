@@ -25,6 +25,12 @@ body {
   color: var(--base00);
 }
 
+pre,
+code {
+  font-family: 'Courier New', monospace;
+  font-family: Hack, monospace;
+}
+
 input {
   font-size: 1rem;
   background-color: var(--base2);
@@ -61,16 +67,9 @@ h1 {
 .wrapper {
   max-width: 750px;
   margin: 0 auto;
-  text-align: center;
 }
 
 input.ithkuil {
   width: 100%;
-  font-size: 1rem;
-}
-
-.ipa {
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: bold;
-  color: var(--blue);
+  font-size: 21px;
 }

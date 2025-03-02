@@ -36,10 +36,12 @@ const syllables = computed(() => romanizedIthkuilToSyllables(romanizedIthkuilTex
   <div class="ipa-component">
     <div class="wrapper">
       <h1>Romanized Ithkuil to IPA</h1>
+
       <input type="text" v-model="romanizedIthkuilText" class="ithkuil" />
+
       <p v-if="ipa">IPA: <span class="ipa">{{ ipa }}</span></p>
 
-      <pre v-if="error" class="ipa error" style="text-align: left;">{{ error }}</pre>
+      <pre v-if="error" class="ipa error">{{ error }}</pre>
 
       <p>Syllables: <span class="syllables">{{ syllables }}</span></p>
     </div>
@@ -48,9 +50,15 @@ const syllables = computed(() => romanizedIthkuilToSyllables(romanizedIthkuilTex
 
 <style scoped>
 .error {
-  color: var(--red);
+  font-size: .8rem;
+  color: var(--orange);
+}
+.ipa {
+  font-family: Hack, monospace;
+  color: var(--magenta);
 }
 .syllables {
-  color: var(--orange);
+  color: var(--red);
+  font-weight: bold;
 }
 </style>
