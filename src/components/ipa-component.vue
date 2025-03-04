@@ -1,13 +1,22 @@
 <script setup lang="ts">
-import { romanizedIthkuilToSyllables } from 'ithkuil-tools'
+import { romanizedIthkuilToIpa, romanizedIthkuilToSyllables } from 'ithkuil-tools'
 import { computed, ref } from 'vue'
-const { romanizedIthkuilToIpa } = await import('ithkuil-tools')
+import ipaTranslationOptions from './ipa-translation-options.vue'
 
 // Interface
 
 // Local State
+const translationOptions = ref({
+  brackets: true,
+  fullStopsBetweenVowels: true
+})
+
 const romanizedIthkuilText = ref('Wezvwaušburdóu yaizxra sai.')
-const ipaResult = computed<string | Error>(() => romanizedIthkuilToIpa(romanizedIthkuilText.value))
+const ipaResult = computed<string | Error>(() => romanizedIthkuilToIpa(romanizedIthkuilText.value, {
+  stressMarks: 'line',
+  brackets: translationOptions.value.brackets,
+  fullStopsBetweenVowels: translationOptions.value.fullStopsBetweenVowels
+}))
 
 const ipa = computed<string | undefined>(() => {
   if (typeof ipaResult.value === 'string') {
@@ -39,6 +48,8 @@ const syllables = computed(() => romanizedIthkuilToSyllables(romanizedIthkuilTex
 
       <input type="text" v-model="romanizedIthkuilText" class="ithkuil" />
 
+      <ipa-translation-options v-model="translationOptions"/>
+
       <p v-if="ipa">IPA: <span class="ipa">{{ ipa }}</span></p>
 
       <pre v-if="error" class="ipa error">{{ error }}</pre>
@@ -54,7 +65,7 @@ const syllables = computed(() => romanizedIthkuilToSyllables(romanizedIthkuilTex
   color: var(--orange);
 }
 .ipa {
-  font-family: Hack, monospace;
+  font-family: "Source Code Pro", monospace;
   color: var(--magenta);
 }
 .syllables {

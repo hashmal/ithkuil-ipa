@@ -19,7 +19,8 @@
 }
 
 body {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: 'Inter', sans-serif;
+  font-optical-sizing: auto;
   font-size: 21px;
   background-color: var(--base3);
   color: var(--base00);
@@ -27,8 +28,7 @@ body {
 
 pre,
 code {
-  font-family: 'Courier New', monospace;
-  font-family: Hack, monospace;
+  font-family: 'Source Code Pro', monospace;
 }
 
 input {
@@ -61,7 +61,7 @@ input:focus {
 
 h1 {
   font-size: 3rem;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 .wrapper {
